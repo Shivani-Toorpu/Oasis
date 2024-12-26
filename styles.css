@@ -1,0 +1,243 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Header styles */
+header {
+    background-color: navy;
+    color: white;
+}
+
+.header-top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap; /* Allows wrapping for smaller screens */
+    padding: 10px 20px;
+}
+
+.logo {
+    width: 80px;
+    height: auto;
+    margin-right: 20px;
+}
+
+.header-content {
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 28px;
+}
+
+header .address {
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.header-bottom {
+    background-color: #002b5c;
+    text-align: center;
+    padding: 10px 0;
+}
+
+nav {
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center; /* Centers nav items on small screens */
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Hero section */
+.hero img {
+    width: 100%;
+    height: auto;
+}
+
+/* Info Section */
+.info-section {
+    padding: 10px 20px;
+    text-align: center;
+}
+
+.info-section h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: navy;
+    font-weight: bold;
+}
+
+/* About Section */
+.about-1 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px; /* Adds spacing between elements */
+    margin-bottom: 20px;
+}
+
+.about-description {
+    font-size: 16px;
+    line-height: 1.6;
+    text-align: justify;
+    flex: 1 1 300px; /* Adjusts for small screens */
+}
+
+.about-image {
+    flex: 1 1 300px;
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Facility Section */
+.facility-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Adjusts for screen size */
+    gap: 20px;
+    padding: 20px;
+}
+
+.facility-item {
+    text-align: center;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: transform 0.3s ease;
+}
+
+.facility-item:hover {
+    transform: scale(1.05);
+}
+
+.facility-item img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Gallery Section */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 10px 20px;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1);
+}
+
+/* FAQ Section */
+.faq-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 10px 20px;
+}
+
+.faq-item {
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    background-color: #fff;
+}
+
+/* Contact Section */
+.contact-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 16px;
+}
+
+.contact-item img {
+    width: 30px;
+    height: 30px;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .header-top {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .logo {
+        margin-bottom: 10px;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .about-1 {
+        flex-direction: column;
+    }
+
+    .facility-container {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+
+    .faq-container {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 22px;
+    }
+
+    header .address {
+        font-size: 12px;
+    }
+
+    nav a {
+        font-size: 14px;
+    }
+
+    .about-description {
+        font-size: 14px;
+    }
+
+    .contact-item {
+        font-size: 14px;
+    }
+}
